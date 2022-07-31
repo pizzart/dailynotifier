@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "575764241177",
+    "project_id": "dailynotifier",
+    "storage_bucket": "dailynotifier.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575764241177:android:5ecbfa89710d2110528388",
+        "android_client_info": {
+          "package_name": "com.pibbium.dailynotifier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "575764241177-sg69k408oo18vbb6p7m9f0iu54i2hdmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6-2cw13KEtuF_ZIf2vcCbS3aLfJlxtUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "575764241177-sg69k408oo18vbb6p7m9f0iu54i2hdmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
