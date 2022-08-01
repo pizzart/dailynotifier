@@ -59,8 +59,8 @@ Future<void> setupPeriodicNotifs(widget) async {
   Workmanager().registerPeriodicTask(
     'dailynotifier',
     'dailynotification',
-    frequency: const Duration(days: 1),
-    initialDelay: specified.difference(tz.TZDateTime.now(tz.local)),
+    // frequency: const Duration(days: 1),
+    frequency: specified.difference(tz.TZDateTime.now(tz.local)),
     inputData: inputData,
   );
 }
@@ -89,7 +89,7 @@ void callbackDispatcher() {
       } else {
         return Future.value(false);
       }
-      print(notifText);
+      // print(notifText);
       final prefs = await SharedPreferences.getInstance();
       TimeOfDay time = TimeOfDay(
           hour: prefs.getInt('hour') ?? 10, minute: prefs.getInt('minute') ?? 0);
@@ -99,11 +99,12 @@ void callbackDispatcher() {
           DateTime(
               tomorrow.year, tomorrow.month, tomorrow.day, time.hour, time.minute),
           tz.local);
+      // Workmanager().cancelAll();
       Workmanager().registerPeriodicTask(
         'dailynotifier',
         'dailynotification',
-        frequency: const Duration(days: 1),
-        initialDelay: specified.difference(tz.TZDateTime.now(tz.local)),
+        // frequency: const Duration(days: 1),
+        frequency: specified.difference(tz.TZDateTime.now(tz.local)),
         inputData: inputData,
       );
       NotificationService().init();
